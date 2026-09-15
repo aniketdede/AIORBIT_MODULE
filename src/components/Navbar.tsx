@@ -28,33 +28,33 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#09090b]/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         
-        {/* Brand Logo: Unified Single-Source Component */}
-        <div className="flex items-center gap-6">
+        {/* Left: Brand Logo */}
+        <div className="flex items-center shrink-0">
           <AiOrbitLogo size="md" showVersion={true} showSubtitle={true} />
-
-          {/* Desktop Nav Links */}
-          <nav className="hidden md:flex items-center gap-1 ml-2">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                  link.active
-                    ? 'bg-zinc-800 text-white border border-white/10 shadow-sm'
-                    : 'text-zinc-400 hover:text-white hover:bg-zinc-900'
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </nav>
         </div>
 
-        {/* Right Section: Search trigger & Submit Button */}
-        <div className="flex items-center gap-3">
+        {/* Center: Centered Nav Links */}
+        <nav className="hidden md:flex items-center justify-center gap-1 font-sans mx-auto">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+                link.active
+                  ? 'bg-zinc-800 text-white border border-white/10 shadow-sm font-semibold'
+                  : 'text-zinc-400 hover:text-white hover:bg-zinc-900/80'
+              }`}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Right Section: Search Trigger & Submit CTA */}
+        <div className="flex items-center gap-3 shrink-0">
           <button
             onClick={onOpenSearch}
-            className="hidden sm:flex items-center gap-2 rounded-lg border border-white/10 bg-zinc-900/80 px-3 py-1.5 text-xs text-zinc-400 hover:border-zinc-700 hover:text-white transition-all"
+            className="hidden sm:flex items-center gap-2 rounded-lg border border-white/10 bg-zinc-900/80 px-3 py-1.5 text-xs text-zinc-400 hover:border-zinc-700 hover:text-white transition-all font-sans"
           >
             <Search className="h-3.5 w-3.5 text-zinc-400" />
             <span>Search ecosystem...</span>
@@ -67,7 +67,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
             href="https://aiorbit.club"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-1.5 rounded-lg bg-white px-3 py-1.5 text-xs font-semibold text-black hover:bg-zinc-200 transition-colors shadow-sm"
+            className="hidden sm:inline-flex items-center gap-1.5 rounded-lg bg-white px-3.5 py-1.5 text-xs font-semibold text-black hover:bg-zinc-200 transition-colors shadow-sm"
           >
             <Plus className="h-3.5 w-3.5" />
             Submit Tool
@@ -83,7 +83,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
         <div className="md:hidden border-b border-white/10 bg-[#09090b] px-4 py-4 space-y-2">
           <div className="flex flex-col gap-1">
