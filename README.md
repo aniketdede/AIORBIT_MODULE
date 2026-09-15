@@ -10,7 +10,7 @@ A full-stack, enterprise-grade **AI Tools Directory & Product Detail Hub** modul
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 
 * **Sub-10ms Instant Search & Hotkeys (`⌘K`)**: Debounced real-time query engine matching tool names, descriptions, tasks, and developers with zero layout shift (`CLS = 0`).
 * **Multi-Category Query Engine**: 12+ tech verticals (*All, Coding, Chatbots, Image Generation, Video, Audio, Productivity, Marketing, Business, Education, Agents, Workflow Automation*).
