@@ -1,0 +1,28 @@
+# Dependencies
+node_modules
+/.pnpm
+/.yarn
+.npm/
+.config/
+
+# Next.js build output
+/.next/
+/out/
+/build
+/dist
+
+# Environment variables & secrets
+.env
+.env*.local
+.env.production
+.env.development
+*.pem
+
+# IDE & OS files
+.DS_Store
+*.pem
+.vscode/
+.idea/
+
+# Workspace upload scratch files
+/uploads/
